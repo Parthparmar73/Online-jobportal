@@ -1,0 +1,208 @@
+body, html { 
+    height: 100%; 
+    margin:0; 
+    font-family:'Poppins',sans-serif; 
+    overflow:hidden;
+}
+.video-bg {
+    position: fixed; 
+    top:0; 
+    left:0;
+    width:100vw; 
+    height:100vh; 
+    object-fit:cover; 
+    z-index:-1;
+}
+.overlay {
+    position: fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background:rgba(0,0,0,0.6); 
+    z-index:0;
+}
+/* Centered text */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.main-title {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.bt-custom {
+  font-size: 14px;       /* chhota font */
+  padding: 5px 15px;     /* chhota padding */
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  width:150px;
+  height:30px;
+}
+
+.bt-custom:hover {
+  background-color: #fff;
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title { font-size: 45px; }
+  .sub-title { font-size: 20px; }
+  .bt-custom { font-size: 18px; padding: 10px 25px; width:auto; height:auto; }
+}
+
+.container-box {
+    position: relative; 
+    z-index:1; 
+    display:flex; 
+    width:900px; 
+    height:500px; 
+    border-radius:15px; 
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.4); 
+    background: rgba(255,255,255,0.1); 
+    backdrop-filter: blur(12px);
+}
+.left-panel {
+    flex:1; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    background:#000; 
+    position:relative;
+}
+.left-panel img { 
+    width:100%; 
+    height:100%; 
+    object-fit:cover; 
+    filter: brightness(50%); 
+}
+.left-panel .overlay-text {
+    position:absolute; 
+    color:white; 
+    text-align:center; 
+    background: rgba(0,0,0,0.5); 
+    padding:20px; 
+    border-radius:10px;
+}
+.left-panel .overlay-text h1 { 
+    font-size:2.5rem; 
+    margin-bottom:10px; 
+    font-weight:bold; 
+}
+.left-panel .overlay-text p { 
+    font-size:1.2rem; 
+}
+.right-panel { 
+    flex:1; 
+    background:white; 
+    padding:40px; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    position:relative; 
+    overflow:hidden; 
+}
+.form-wrapper { 
+    position: relative; 
+    width:100%; 
+    height:100%; 
+    overflow:hidden; 
+}
+.form-box { 
+    position:absolute; 
+    top:0; 
+    width:100%; 
+    height:100%; 
+    max-height: 80vh;     /* viewport height का 80% */
+  overflow-y: auto;
+    transition: transform 0.6s ease-in-out; 
+    backface-visibility:hidden; 
+}
+#loginForm { 
+    max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+#forgotForm { 
+    transform: translateX(100%); 
+}
+#otpForm { 
+    transform: translateX(200%); 
+}
+#registerForm {
+  transform: rotateY(-180deg);
+  max-height: 80vh;       /* viewport height का 80% */
+  overflow-y: auto;       /* vertical scroll enable */
+  padding-right: 10px;    /* scrollbar के लिए जगह */
+}
+.form-wrapper.show-register #loginForm { transform: rotateY(180deg); }
+.form-wrapper.show-register #registerForm {
+  transform: rotateY(0deg);
+  z-index: 3;
+}
+.form-wrapper.show-forgot #loginForm { 
+    transform: translateX(-100%); 
+}
+.form-wrapper.show-forgot #forgotForm { 
+    transform: translateX(0); 
+}
+.form-wrapper.show-otp #loginForm { 
+    transform: translateX(-200%); 
+}
+.form-wrapper.show-otp #otpForm { transform: translateX(0); }
+.form-control { 
+    border-radius:10px; 
+    padding:12px; 
+}
+.btn-custom { 
+    background:#007bff; 
+    color:white; 
+    border-radius:10px; 
+    padding:12px; 
+    font-weight:bold; 
+    width:100%; 
+}
+.btn-custom:hover { background:#0056b3; }
+.links {
+     margin-top:15px; 
+     font-size:0.9rem; 
+    }
+.links a { 
+    color:#007bff; 
+    text-decoration:none; 
+}
+.links a:hover { text-decoration:underline; }
+.page-center { 
+    height:100vh; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+}
+.register-link { 
+    margin-top:20px; 
+    text-align:center; 
+}
+.register-link a { 
+    font-weight:bold; 
+    color:#007bff; 
+    text-decoration:none; 
+}
+.register-link a:hover { text-decoration:underline; }
+.alert { font-size:0.9rem; }
+

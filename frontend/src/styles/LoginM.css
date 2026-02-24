@@ -1,0 +1,30 @@
+.login-container {
+  width: 1000px;
+  max-width: 95%;
+  height: 550px;
+}
+
+.left-panel {
+  width: 55%;
+  background: url("../assets/web.mp4") center center / cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
+
+.right-panel {
+  width: 85%;
+   height:550px;
+  overflow-y: auto;
+   
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.7;
+}

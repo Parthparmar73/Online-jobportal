@@ -1,0 +1,187 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container-fluid, .row {
+  height: 100vh; /* full viewport height */
+}
+
+.col-left, .col-right {
+  height: 100%; /* columns fill row height */
+}
+
+/* Right-side image */
+.col-right {
+  background-image: url('building.jpg'); /* correct path relative to CSS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Login box styling */
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Buttons */
+.login-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-btn.google { background-color: #fff; border: 1px solid #ddd; color: #000; }
+.login-btn.Guest { background-color: #f3f2f2; border: 1px solid #ccc; color: #000; }
+.login-btn.email { background-color: #0a66c2; border: none; color: #fff; }
+.login-btn:hover { opacity: 0.9; }
+
+/* Links */
+a { text-decoration: none; color: black; }
+a:hover { color: #0073b1; text-decoration: underline; }
+.header-bg {
+    background-image: url('building.jpg'); /* make sure path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px; /* adjust as needed */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Optional dark overlay for better text visibility */
+.header-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+/* Make content appear above overlay */
+.header-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar links styling */
+.header-bg .nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
+.header-bg .nav-link:hover {
+    color: #ffd700 !important;
+}
+/* --- Hover effect for Google button --- */
+.login-btn.google {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.login-btn.google:hover {
+  background-color: #0a66c2;   /* LinkedIn blue */
+  color: #fff;                 /* white text */
+  border-color: #0a66c2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10,102,194,0.3);
+}
+.login-btn.email {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.login-btn.email:hover {
+  background-color: #0a66c2;   /* LinkedIn blue */
+  color: #fff;                 /* white text */
+  border-color: #0a66c2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10,102,194,0.3);
+}
+.login-btn.Guest {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.login-btn.Guest:hover {
+  background-color: #0a66c2;   /* LinkedIn blue */
+  color: #fff;                 /* white text */
+  border-color: #0a66c2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10,102,194,0.3);
+}
+/* Right-side background image */
+.left-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure image covers entire section */
+.left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* adjust opacity here */
+  z-index: 1;
+}
+/* Overlay text default position (middle, just in case) */
+.overlay-text {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+/* Dark overlay for readability */
+.left-panel::before {
+  background: rgba(0,0,0,0); /* completely transparent */
+}
+/* 🆕 Align text to top instead of middle */
+.overlay-text.top-text {
+  top: 30px;           /* Distance from top */
+  text-align: center;  /* Center horizontally */
+}
+
+/* Optional: Add a fade-in animation for a nice effect */
+.overlay-text.top-text h1 {
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
